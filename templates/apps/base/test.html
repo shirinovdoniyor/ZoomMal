@@ -1,0 +1,18 @@
+{% extends 'apps/base/include.html' %}
+{% load static %}
+{% block body %}
+	<section class="el-container">
+    <div class="el-row">
+        <div class="el-col el-col-24">
+            <div role="alert" class="el-alert el-alert--error is-light"><i
+                    class="el-alert__icon el-icon-error is-big"></i>
+                <div class="el-alert__content"><span class="el-alert__title is-bold"><h1>Ошибка 404 - Страница Не Найдена</h1></span>
+                    <i class="el-alert__closebtn el-icon-close"></i></div>
+            </div>
+            <br> <a href="/" class="el-button el-button--warning nuxt-link-active">Вернуться на домашнюю страницу</a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+

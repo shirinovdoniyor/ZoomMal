@@ -1,0 +1,74 @@
+{% extends 'apps/base/include.html' %}
+{% load humanize %}
+{% block body %}
+    <main class="el-main">
+
+        <div><!---->
+            <div>
+                <section class="el-container hotdeals">
+                    <div class="el-row is-align-middle el-row--flex">
+                        <div class="el-col el-col-16"><h2>Onlayn xarid qiling</h2></div>
+                        <div class="text-right el-col el-col-8"><a href="/page/featured-product/?sectionId=213"
+                                                                   class="link-arrow link-arrow--right text-bold"
+                                                                   style="text-decoration: none;">Hammasini ko'rsatish</a>
+                        </div>
+                    </div>
+                    <div class="block-white hotdeals__products el-row is-align-middle">
+                        {% for product in products %}
+                            <div class="el-col el-col-24 el-col-xs-12 el-col-sm-8 el-col-md-6"><a
+                                    href="/product/31524694/elektr-tish-chotkasi-laifen-wave/" class="product-mini"
+                                    data-productid="31524694" itemscope="itemscope" itemtype="http://schema.org/Product">
+                                <meta itemprop="url"
+                                      content="https://www.zoodmall.uz/product/31524694/elektr-tish-chotkasi-laifen-wave/">
+                                <div class="product-mini__img">
+                                    <div class="product-tag"
+                                             style="background-color: rgb(48, 52, 147); color: rgb(255, 255, 255);">
+                                        {{ product.badge.name }}
+                                    </div>
+                                    <div class="el-image"><img
+                                            src=" {{ product.thumbnail_image.url }}"
+                                            alt="Elektr tish cho'tkasi Laifen Wave - ZOOD"
+                                            title="Elektr tish cho'tkasi Laifen Wave" itemprop="image" width="255"
+                                            height="222"
+                                            class="el-image__inner" style="object-fit: contain;"><!----></div>
+                                </div>
+                                <div class="product-mini__data">
+                                    <div dir="auto" itemprop="name" class="product-mini__title">
+                                        {{ product.name }}
+                                    </div>
+                                    <div class="product-mini__totalLocalPrice"><b>UZS
+                                        {{ product.discount_price|floatformat:"0" }}</b></div>
+                                    <div><span class="price-text-decoration">UZS {{ product.price|floatformat:'0'|intcomma }}
+            </span> <span class="product-mini__discount">-{{ product.discount }}%</span></div>
+                                    <div itemprop="offers" itemscope="itemscope" itemtype="https://schema.org/Offer"
+                                         class="product-mini__payment">
+                                        <meta itemprop="priceCurrency" content="UZS">
+                                        <meta itemprop="price" content="799000">
+                                        <div class="downpaymenttextborder">
+                                            <div class="downpaymenttext"><span
+                                                    class="downpaymenttext-padding">Hozir  </span>
+                                                <span class="price-padding-5">UZS {{ product.initial_payment }}</span></div>
+                                            <p class="downpaymenttext" style="margin: 0px;"><span
+                                                    class="downpaymenttext-padding"> Keyinroq </span> <span
+                                                    class="price-padding-5">UZS {{ product.monthly_pay }}
+                  146,483</span> <span>x5</span></p></div>
+                                    </div>
+                                    <div class="product-mini__rating"><!----> <!----> <img
+                                            src="https://images.zoodmall.com/app/appImages/UZ.png" width="19" height="16"
+                                            alt="flag" class="flag"> <img
+                                            src="https://images.zoodmall.com/app/appImages/expressDeliveryIcon.png"
+                                            width="80px"
+                                            alt="Express Shipping" class="express-shipping"></div>
+                                </div>
+                            </a></div>
+
+                        {% endfor %}
+
+
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+{% endblock  %}

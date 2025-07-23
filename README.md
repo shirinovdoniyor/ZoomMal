@@ -1,0 +1,2 @@
+ZOOMMAL sayti
+Not full 
